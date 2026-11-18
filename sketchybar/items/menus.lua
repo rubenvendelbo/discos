@@ -1,18 +1,29 @@
--- App menus in the bar. Adapted from FelixKratz/dotfiles (GPL-3.0).
-local colors = require("colors")
+-- App menus in the bar, swapped in place of the spaces via the indicator.
+-- Adapted from FelixKratz/dotfiles (GPL-3.0) and adriankarlen/dots.
+local settings = require "settings"
 local menus_bin = "$CONFIG_DIR/helpers/menus/bin/menus"
 local max_items = 15
 
-local watcher = sbar.add("item", { drawing = false, updates = true })
-sbar.add("event", "discos_toggle_menus")
+local menu_watcher = sbar.add("item", {
+  drawing = false,
+  updates = false,
+})
+local space_menu_swap = sbar.add("item", {
+  drawing = false,
+  updates = true,
+})
+sbar.add("event", "swap_menus_and_spaces")
 
-local items = {}
+local menu_items = {}
 for i = 1, max_items do
-  items[i] = sbar.add("item", "menu." .. i, {
+  menu_items[i] = sbar.add("item", "menu." .. i, {
     drawing = false,
     icon = { drawing = false },
+    background = { drawing = false },
     label = {
-      color = i == 1 and colors.accent or colors.text,
+      font = {
+        style = settings.font.style_map[i == 1 and "Heavy" or "Semibold"],
+      },
       padding_left = 6,
       padding_right = 6,
     },
@@ -20,25 +31,37 @@ for i = 1, max_items do
   })
 end
 
-local function update()
-  sbar.exec(menus_bin .. " -l", function(out)
+sbar.add("bracket", { "/menu\\..*/" }, {})
+
+local menu_padding = sbar.add("item", "menu.padding", {
+  drawing = false,
+  width = 5,
+})
+
+local function update_menus()
+  sbar.exec(menus_bin .. " -l", function(menus)
     sbar.set("/menu\\..*/", { drawing = false })
+    menu_padding:set { drawing = true }
     local id = 1
-    for name in string.gmatch(out, "[^\r\n]+") do
+    for menu in string.gmatch(menus, "[^\r\n]+") do
       if id > max_items then break end
-      items[id]:set({ label = name, drawing = true })
+      menu_items[id]:set { label = menu, drawing = true }
       id = id + 1
     end
   end)
 end
 
-watcher:subscribe("front_app_switched", update)
+menu_watcher:subscribe("front_app_switched", update_menus)
 
-local shown = true
-watcher:subscribe("discos_toggle_menus", function()
-  shown = not shown
-  watcher:set({ updates = shown })
-  if shown then update() else sbar.set("/menu\\..*/", { drawing = false }) end
+space_menu_swap:subscribe("swap_menus_and_spaces", function()
+  local drawing = menu_items[1]:query().geometry.drawing == "on"
+  if drawing then
+    menu_watcher:set { updates = false }
+    sbar.set("/menu\\..*/", { drawing = false })
+    sbar.set("/space\\..*/", { drawing = true })
+  else
+    menu_watcher:set { updates = true }
+    sbar.set("/space\\..*/", { drawing = false })
+    update_menus()
+  end
 end)
-
-update()
