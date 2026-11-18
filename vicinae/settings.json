@@ -1,0 +1,526 @@
+// This configuration is merged with the default vicinae configuration file, which you can obtain by running the `vicinae config default` command.
+// Every item defined in this file takes precedence over the values defined in the default config or any other imported file.
+//
+// You can make manual edits to this file, however you should keep in mind that this file may be written to by vicinae when a configuration change is made through the GUI.
+// When that happens, any custom comments or formatting will be lost.
+//
+// If you want to maintain a configuration file with your own comments and formatting, you should create a separate file and add it to the 'imports' array.
+//
+// Learn more about configuration at https://docs.vicinae.com/config
+
+{
+   "$schema": "https://vicinae.com/schemas/config.json",
+   "close_on_focus_loss": true,
+   "keybinding": "vim",
+   "tray": {
+      "enabled": false
+   },
+   "global_shortcuts": {
+      "toggle": "control+SPACE"
+   },
+   "theme": {
+      "dark": {
+         "name": "gruvbox-dark"
+      }
+   },
+   "telemetry": {
+      "system_info": false
+   },
+   "launcher_window": {
+      "compact_mode": {
+         "enabled": true
+      }
+   },
+   "providers": {
+      "applications": {
+         "enabled": true,
+         "entrypoints": {
+            "app.zen-browser.zen": {
+               "shortcut": "control+Z"
+            },
+            "bobko.aerospace": {
+               "enabled": false
+            },
+            "com.anthropic.claudefordesktop": {
+               "shortcut": "control+B"
+            },
+            "com.apple.AboutThisMacLauncher": {
+               "enabled": false
+            },
+            "com.apple.AppStore": {
+               "enabled": false
+            },
+            "com.apple.Automator": {
+               "enabled": false
+            },
+            "com.apple.BluetoothFileExchange": {
+               "enabled": false
+            },
+            "com.apple.Chess": {
+               "enabled": false
+            },
+            "com.apple.ColorSyncUtility": {
+               "enabled": false
+            },
+            "com.apple.Console": {
+               "enabled": false
+            },
+            "com.apple.DVDPlayer": {
+               "enabled": false
+            },
+            "com.apple.DeskCam": {
+               "enabled": false
+            },
+            "com.apple.Dictionary": {
+               "enabled": false
+            },
+            "com.apple.DigitalColorMeter": {
+               "enabled": false
+            },
+            "com.apple.DirectoryUtility": {
+               "enabled": false
+            },
+            "com.apple.FolderActionsSetup": {
+               "enabled": false
+            },
+            "com.apple.GenerativePlaygroundApp": {
+               "enabled": false
+            },
+            "com.apple.Home": {
+               "enabled": false
+            },
+            "com.apple.IPAInstaller": {
+               "enabled": false
+            },
+            "com.apple.Image_Capture": {
+               "enabled": false
+            },
+            "com.apple.Maps": {
+               "enabled": true
+            },
+            "com.apple.MigrateAssistant": {
+               "enabled": false
+            },
+            "com.apple.Music": {
+               "enabled": false
+            },
+            "com.apple.Passwords": {
+               "enabled": false
+            },
+            "com.apple.PhotoBooth": {
+               "enabled": false
+            },
+            "com.apple.QuickTimePlayerX": {
+               "enabled": false
+            },
+            "com.apple.Safari": {
+               "enabled": false
+            },
+            "com.apple.ScreenContinuity": {
+               "enabled": false
+            },
+            "com.apple.ScreenSharing": {
+               "enabled": false
+            },
+            "com.apple.ScriptEditor2": {
+               "enabled": false
+            },
+            "com.apple.Stickies": {
+               "enabled": false
+            },
+            "com.apple.SystemProfiler": {
+               "enabled": false
+            },
+            "com.apple.TV": {
+               "enabled": false
+            },
+            "com.apple.TextEdit": {
+               "enabled": false
+            },
+            "com.apple.Ticket-Viewer": {
+               "enabled": false
+            },
+            "com.apple.VoiceOverUtility": {
+               "enabled": false
+            },
+            "com.apple.airport.airportutility": {
+               "enabled": false
+            },
+            "com.apple.appleseed.FeedbackAssistant": {
+               "enabled": false
+            },
+            "com.apple.apps.launcher": {
+               "enabled": false
+            },
+            "com.apple.archiveutility": {
+               "enabled": false
+            },
+            "com.apple.audio.AudioMIDISetup": {
+               "enabled": false
+            },
+            "com.apple.backup.launcher": {
+               "enabled": false
+            },
+            "com.apple.bootcampassistant": {
+               "enabled": false
+            },
+            "com.apple.exposelauncher": {
+               "enabled": false
+            },
+            "com.apple.finder.Open-AirDrop": {
+               "enabled": false
+            },
+            "com.apple.finder.Open-AllMyFiles": {
+               "enabled": false
+            },
+            "com.apple.finder.Open-Computer": {
+               "enabled": false
+            },
+            "com.apple.finder.Open-Network": {
+               "enabled": false
+            },
+            "com.apple.finder.Open-Recents": {
+               "enabled": false
+            },
+            "com.apple.freeform": {
+               "enabled": false
+            },
+            "com.apple.garageband10": {
+               "enabled": false
+            },
+            "com.apple.grapher": {
+               "enabled": false
+            },
+            "com.apple.helpviewer": {
+               "enabled": false
+            },
+            "com.apple.iBooksX": {
+               "enabled": false
+            },
+            "com.apple.iWork.Keynote": {
+               "enabled": false
+            },
+            "com.apple.iWork.Pages": {
+               "enabled": false
+            },
+            "com.apple.keychainaccess": {
+               "enabled": false
+            },
+            "com.apple.launchpad.launcher": {
+               "enabled": false
+            },
+            "com.apple.mail": {
+               "enabled": false
+            },
+            "com.apple.news": {
+               "enabled": false
+            },
+            "com.apple.printcenter": {
+               "enabled": false
+            },
+            "com.apple.shortcuts": {
+               "enabled": false
+            },
+            "com.apple.siri.launcher": {
+               "enabled": false
+            },
+            "com.apple.stocks": {
+               "enabled": false
+            },
+            "com.apple.weather": {
+               "enabled": false
+            },
+            "com.apple.wifi.diagnostics": {
+               "enabled": false
+            },
+            "com.blackmagic-design.BlackmagicProxyGeneratorLite": {
+               "enabled": false
+            },
+            "com.blackmagic-design.BlackmagicRawPlayer": {
+               "enabled": false
+            },
+            "com.blackmagic-design.BlackmagicRawSpeedTest": {
+               "enabled": false
+            },
+            "com.blackmagic-design.DaVinciRemoteMonitor": {
+               "enabled": false
+            },
+            "com.blackmagic-design.UninstallDaVinciResolve": {
+               "enabled": false
+            },
+            "com.blackmagic-design.davincicontrolpanels.utility": {
+               "enabled": false
+            },
+            "com.blackmagic-design.fairlightpanels.configutility": {
+               "enabled": false
+            },
+            "com.google.Chrome": {
+               "enabled": false
+            },
+            "com.installbuilder.appinstaller": {
+               "enabled": false
+            },
+            "com.maplesoft.maple2026.x86_64": {
+               "enabled": false
+            },
+            "com.maplesoft.maplets.MapletLauncher": {
+               "enabled": false
+            },
+            "com.mitchellh.ghostty": {
+               "enabled": true
+            },
+            "dev.pulsar-edit.pulsar": {
+               "enabled": false
+            },
+            "net.sourceforge.supercollider": {
+               "enabled": false
+            },
+            "org.mozilla.firefox": {
+               "enabled": false
+            }
+         }
+      },
+      "browser-extension": {
+         "enabled": false
+      },
+      "core": {
+         "entrypoints": {
+            "list-extensions": {
+               "enabled": false
+            },
+            "manage-fallback": {
+               "enabled": false
+            },
+            "open-config-file": {
+               "enabled": false
+            },
+            "open-default-config": {
+               "enabled": false
+            },
+            "refresh-apps": {
+               "enabled": false
+            },
+            "reload-scripts": {
+               "enabled": false
+            },
+            "report-bug": {
+               "enabled": false
+            },
+            "search-emojis": {
+               "enabled": false
+            },
+            "search-menu-bar": {
+               "enabled": false
+            },
+            "show-logs": {
+               "enabled": false
+            },
+            "sponsor": {
+               "enabled": false
+            },
+            "store": {
+               "enabled": false
+            }
+         }
+      },
+      "developer": {
+         "enabled": false,
+         "entrypoints": {
+            "create": {
+               "enabled": true
+            }
+         }
+      },
+      "macos-settings": {
+         "entrypoints": {
+            "com.apple.Accessibility-Settings.extension": {
+               "enabled": false
+            },
+            "com.apple.AirDrop-Handoff-Settings.extension": {
+               "enabled": false
+            },
+            "com.apple.Appearance-Settings.extension": {
+               "enabled": false
+            },
+            "com.apple.Battery-Settings.extension": {
+               "enabled": false
+            },
+            "com.apple.BluetoothSettings": {
+               "enabled": false
+            },
+            "com.apple.CD-DVD-Settings.extension": {
+               "enabled": false
+            },
+            "com.apple.ClassKit-Settings.extension": {
+               "enabled": false
+            },
+            "com.apple.Classroom-Settings.extension": {
+               "enabled": false
+            },
+            "com.apple.ControlCenter-Settings.extension": {
+               "enabled": false
+            },
+            "com.apple.Coverage-Settings.extension": {
+               "enabled": false
+            },
+            "com.apple.Date-Time-Settings.extension": {
+               "enabled": false
+            },
+            "com.apple.Desktop-Settings.extension": {
+               "enabled": false
+            },
+            "com.apple.Displays-Settings.extension": {
+               "enabled": false
+            },
+            "com.apple.Family-Settings.extension": {
+               "enabled": false
+            },
+            "com.apple.Focus-Settings.extension": {
+               "enabled": false
+            },
+            "com.apple.FollowUpSettings.FollowUpSettingsExtension": {
+               "enabled": false
+            },
+            "com.apple.Game-Center-Settings.extension": {
+               "enabled": false
+            },
+            "com.apple.Game-Controller-Settings.extension": {
+               "enabled": false
+            },
+            "com.apple.HeadphoneSettings": {
+               "enabled": false
+            },
+            "com.apple.Internet-Accounts-Settings.extension": {
+               "enabled": false
+            },
+            "com.apple.Keyboard-Settings.extension": {
+               "enabled": false
+            },
+            "com.apple.Localization-Settings.extension": {
+               "enabled": false
+            },
+            "com.apple.Lock-Screen-Settings.extension": {
+               "enabled": false
+            },
+            "com.apple.LoginItems-Settings.extension": {
+               "enabled": false
+            },
+            "com.apple.Mouse-Settings.extension": {
+               "enabled": false
+            },
+            "com.apple.Network-Settings.extension": {
+               "enabled": false
+            },
+            "com.apple.NetworkExtensionSettingsUI.NESettingsUIExtension": {
+               "enabled": false
+            },
+            "com.apple.Notifications-Settings.extension": {
+               "enabled": false
+            },
+            "com.apple.Print-Scan-Settings.extension": {
+               "enabled": false
+            },
+            "com.apple.Profiles-Settings.extension": {
+               "enabled": false
+            },
+            "com.apple.Screen-Time-Settings.extension": {
+               "enabled": false
+            },
+            "com.apple.ScreenSaver-Settings.extension": {
+               "enabled": false
+            },
+            "com.apple.Sharing-Settings.extension": {
+               "enabled": false
+            },
+            "com.apple.Siri-Settings.extension": {
+               "enabled": false
+            },
+            "com.apple.Software-Update-Settings.extension": {
+               "enabled": false
+            },
+            "com.apple.Sound-Settings.extension": {
+               "enabled": false
+            },
+            "com.apple.Spotlight-Settings.extension": {
+               "enabled": false
+            },
+            "com.apple.Startup-Disk-Settings.extension": {
+               "enabled": false
+            },
+            "com.apple.SystemProfiler.AboutExtension": {
+               "enabled": false
+            },
+            "com.apple.Time-Machine-Settings.extension": {
+               "enabled": false
+            },
+            "com.apple.Touch-ID-Settings.extension": {
+               "enabled": false
+            },
+            "com.apple.Trackpad-Settings.extension": {
+               "enabled": false
+            },
+            "com.apple.Transfer-Reset-Settings.extension": {
+               "enabled": false
+            },
+            "com.apple.Users-Groups-Settings.extension": {
+               "enabled": false
+            },
+            "com.apple.WalletSettingsExtension": {
+               "enabled": false
+            },
+            "com.apple.Wallpaper-Settings.extension": {
+               "enabled": false
+            },
+            "com.apple.settings.PrivacySecurity.extension": {
+               "enabled": false
+            },
+            "com.apple.settings.Storage": {
+               "enabled": false
+            },
+            "com.apple.systempreferences.AppleIDSettings": {
+               "enabled": false
+            },
+            "com.apple.wifi-settings-extension": {
+               "enabled": false
+            }
+         }
+      },
+      "manage-shortcuts": {
+         "entrypoints": {
+            "create": {
+               "enabled": true
+            },
+            "manage": {
+               "enabled": false
+            }
+         }
+      },
+      "media": {
+         "enabled": true
+      },
+      "raycast-compat": {
+         "enabled": false
+      },
+      "screenshots": {
+         "enabled": false
+      },
+      "scripts": {
+         "preferences": {
+            "customDirs": []
+         }
+      },
+      "snippets": {
+         "enabled": false
+      },
+      "system": {
+         "entrypoints": {
+            "run": {
+               "enabled": false
+            }
+         }
+      },
+      "wm": {
+         "enabled": false
+      }
+   }
+}

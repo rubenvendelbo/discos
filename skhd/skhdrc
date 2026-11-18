@@ -1,0 +1,2 @@
+cmd - g : ~/.config/discos/bin/ghostty-new-window.sh
+cmd - z : ~/.config/discos/bin/zen-new-window.sh

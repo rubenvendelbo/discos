@@ -1,0 +1,5 @@
+macos-titlebar-style = hidden
+macos-window-buttons = hidden
+command = /opt/homebrew/bin/fish
+shell-integration = fish
+config-file = ~/.config/discos/current-theme/ghostty

@@ -1,0 +1,12 @@
+#!/usr/bin/env lua
+package.cpath = package.cpath .. ";" .. os.getenv("HOME") .. "/.local/share/sketchybar_lua/?.so"
+
+-- build helpers (no-op if already up to date)
+os.execute("(cd helpers/menus && make -s)")
+
+sbar = require("sketchybar")
+sbar.begin_config()
+require("bar")
+require("items")
+sbar.end_config()
+sbar.event_loop()
