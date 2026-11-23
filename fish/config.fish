@@ -11,3 +11,5 @@ if status is-interactive
         	commandline -f repaint
     	end
 end
+
+starship init fish | source
